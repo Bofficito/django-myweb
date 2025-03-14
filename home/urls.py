@@ -13,8 +13,8 @@ urlpatterns = [
     path('submit/', submit_form, name="submit_form"),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
-#Backoffice
-urlpatterns += [
-    path('backoffice/', views.backoffice, name='backoffice'),
-    path('backoffice/add_certificate/', views.add_certificate, name='add_certificate'),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+# #Backoffice
+# urlpatterns += [
+#     path('backoffice/', views.backoffice, name='backoffice'),
+#     path('backoffice/add_certificate/', views.add_certificate, name='add_certificate'),
+# ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

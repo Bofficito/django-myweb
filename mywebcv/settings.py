@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-c!js!4)%ig!x!b8y&er)3&$jom@6@ogti_b26z*rw&yx(90ep-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -126,3 +126,10 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    'localhost',
+    'django-myweb-production.up.railway.app',
+    'lautaroboffi.up.railway.app'
+]

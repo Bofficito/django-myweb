@@ -131,3 +131,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # EMAIL_HOST_PASSWORD = os.environ['EMAIL_HOST_PASSWORD']
 # EMAIL_HOST_USER = env('EMAIL_HOST_USER')
 # EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
+
+ALLOWED_HOSTS = [
+    'localhost',
+    'django-myweb-production.up.railway.app'
+]

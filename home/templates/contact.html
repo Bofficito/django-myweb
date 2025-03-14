@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+
+{% block index %}
+{% load static %}
+<head>
+    <title>{% block title %} Contact {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<div class="body-contact">
+    <div class="vscode-window">
+        <div class="window-header">
+            <div class="window-controls">
+                <div class="control close"></div>
+                <div class="control minimize"></div>
+                <div class="control maximize"></div>
+            </div>
+        </div>
+        <div class="file-tabs">
+            <div class="file-tab">contact_form.py</div>
+            <div class="file-tab-button inactive">
+                <a href="{% url 'about' %}" class="file-button">README.md</a>
+            </div>
+            <div class="file-tab-button inactive">
+                <a href="{% url 'skills' %}" class="file-button">skills.py</a>
+            </div>
+            <div class="file-tab-button inactive">
+                <a href="{% url 'base' %}" class="file-button">Go to Terminal</a>
+            </div>
+        </div>
+        <div class="editor-content">
+            <div class="line-numbers">
+                1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>4<br>8<br>15<br>16<br>23<br>42<br>108
+            </div>
+            <div class="code-content">
+                <div class="comment"># Contact Form Handler v1.0.0</div>
+                <div class="comment"># TODO: Implement proper error handling</div>
+                <div class="comment"># FIXME: Add input validation</div>
+                <div class="code-line">
+                    <span class="decorator">@dataclass</span>
+                </div>
+                <div class="code-line">
+                    <span class="keyword">class</span> <span class="function">ContactFormHandler</span>:
+                </div>
+                
+                <form id="contactForm" action="{% url 'submit_form' %}" method="POST">
+                    {% csrf_token %}
+                    
+                    <div class="form-group">
+                        <div class="code-line">    name: str = <span class="string">field(default="")</span></div>
+                        <input type="text" name="name" placeholder="John Doe" required>
+                    </div>
+                
+                    <div class="form-group">
+                        <div class="code-line">    email: str = <span class="string">field(default="")</span></div>
+                        <input type="email" name="email" placeholder="john@example.com" required>
+                    </div>
+                
+                    <div class="form-group">
+                        <div class="code-line">    subject: str = <span class="string">field(default="No Subject")</span></div>
+                        <input type="text" name="subject" placeholder="Project Inquiry" required>
+                    </div>
+                
+                    <div class="form-group">
+                        <div class="code-line">    message: str = <span class="string">field(default="")</span></div>
+                        <textarea name="message" placeholder="Type your message..." required></textarea>
+                    </div>
+                
+                    <div class="code-line">    <span class="keyword">def</span> <span class="function">submit</span>(self) -> None:</div>
+                    <button class="view-button" type="submit">
+                        Execute submit()
+                        <span class="cursor"></span>
+                    </button>
+                
+                    <p id="successMessage" style="display: none; color: green;">successMessage</p>
+                </form>
+
+            </div>
+        </div>
+        <div class="status-bar">
+            <div class="status-item">
+                <span class="mini-icon"></span>
+                Python 3.11.0
+            </div>
+            <div class="status-item">
+                <span class="mini-icon"></span>
+                UTF-8
+            </div>
+            <div class="status-item">
+                <span class="mini-icon"></span>
+                Production
+            </div>
+        </div>
+    </div>
+</div>
+
+
+  
+
+{% endblock %}

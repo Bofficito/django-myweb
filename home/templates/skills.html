@@ -1,0 +1,148 @@
+{% extends 'base.html' %}
+
+{% block about %}
+{% load static %}
+
+<head>
+    <title>{% block title %} About {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<div class="min-h-screen">
+    <!-- Hero Section -->
+    <div class="title-container">
+      <div class="hero-content">
+        <h1 class="gradient-text animate-fade-in">
+        Technical Skills
+        </h1>
+        <p class="hero-description">
+        Explore the languages and frameworks I have learned, along with the certificates I have obtained, which support my devotion and professional growth in the development field.
+        </p>
+      </div>
+    </div>
+
+    <!-- Skills Section -->
+    <div class="container skills-section">
+      <div class="skills-grid">
+        <!-- Languages -->
+        <div class="skill-card">
+          <h2 class="skill-title">
+            <i data-lucide="code-2"></i>
+            Languages
+          </h2>
+          <div class="tech-grid">
+            <div class="tech-item">
+              <img src="https://skillicons.dev/icons?i=python" alt="Python" title="PYTHON">
+            </div>
+            <div class="tech-item">
+              <img src="https://skillicons.dev/icons?i=php" alt="PHP" title="PHP">
+            </div>
+            <div class="tech-item">
+              <img src="https://skillicons.dev/icons?i=javascript" alt="JavaScript" title="JAVASCRIPT">
+            </div>
+            <div class="tech-item">
+              <img src="https://skillicons.dev/icons?i=html" alt="HTML" title="HTML">
+            </div>
+            <div class="tech-item">
+              <img src="https://skillicons.dev/icons?i=css" alt="CSS" title="CSS">
+            </div>
+            <div class="tech-item">
+              <img src="https://skillicons.dev/icons?i=mysql" alt="MySQL" title="MYSQL">
+            </div>
+          </div>
+        </div>
+
+        <!-- Frameworks -->
+        <div class="skill-card">
+          <h2 class="skill-title">
+            <i data-lucide="terminal"></i>
+            Frameworks
+          </h2>
+          <div class="tech-grid">
+            <div class="tech-item">
+              <img src="https://skillicons.dev/icons?i=django" alt="Django" title="DJANGO">
+            </div>
+            <div class="tech-item">
+              <img src="https://skillicons.dev/icons?i=nodejs" alt="Node.js" title="NODE.JS">
+            </div>
+            <div class="tech-item">
+              <img src="https://skillicons.dev/icons?i=react" alt="React" title="REACT">
+            </div>
+            <div class="tech-item">
+              <img src="https://skillicons.dev/icons?i=vue" alt="Vue.js" title="VUE.JS">
+            </div>
+            <div class="tech-item">
+              <img src="https://skillicons.dev/icons?i=docker" alt="Docker" title="DOCKER">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Certificates Section -->
+    <div class="title-container">
+      <div class="hero-content">
+        <h1 class="gradient-text animate-fade-in">
+        Certificates
+        </h1>
+        <p class="hero-description">
+        Each certificate reflects one more step in my path towards technical excellence and my commitment to keep learning and improving.
+        </p>
+      </div>
+    </div>
+    <div class="certificate-container">
+        <div class="certificates-grid">
+        <!-- Python Certificate -->
+        <div class="certificate-card">
+          <div class="certificate-header card-gradient">
+            <div>
+              <h3>Python</h3>
+              <span>Nov 2023 - Feb 2024</span>
+            </div>
+            <a href="https://pub.coderhouse.com/legacy-certificates/65f781e700c426549d42ceda?lang=es" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               class="view-button">
+              View Certificate
+            </a>
+          </div>
+          <div class="certificate-body">
+            <p>
+              In this course I learned modules and syntax to create an application. Skills in Class-Based-View, login, register, accounts, CRUD and modelforms.
+            </p>
+            <p>
+              In the final project, I developed a blog-style web application using Python in Django Framework. Some key functionalities were customizable user registrations and profiles, authentication and authorization systems, administrative interface to manage content and management in user comments and feedback section.
+            </p>
+          </div>
+        </div>
+
+        <!-- Cybersecurity Certificate -->
+        <div class="certificate-card">
+          <div class="certificate-header card-gradient">
+            <div>
+              <h3>Cybersecurity</h3>
+              <span>Sep 2023 - Nov 2023</span>
+            </div>
+            <a href="https://pub.coderhouse.com/legacy-certificates/655baa93b1268da1b2fef21a?lang=es" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               class="view-button">
+              View Certificate
+            </a>
+          </div>
+          <div class="certificate-body">
+            <p>
+              I learned to identify threats and attacks, network security, authentication/authorization techniques, secure development and ethical hacking, vulnerabilities, understanding threats and maintaining a secure organization.
+            </p>
+            <p>
+              The final project is about a cybersecurity consultancy performed for a fictitious company after a massive file encryption incident. Includes risk assessment, implementation of solutions such as EPP, EDR, firewalls and honeypots, as well as staff training and access control to strengthen network security and protect against future threats.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<script>
+  lucide.createIcons();
+</script>
+{% endblock %}

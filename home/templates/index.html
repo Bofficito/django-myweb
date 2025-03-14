@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block index %}
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backend Developer Portfolio</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <main>
+        <div class="page-container">
+            <section id="" class="page active">
+                <div class="terminal">
+                    <div class="terminal-header">
+                        <div class="terminal-controls">
+                            <div class="control close"></div>
+                            <div class="control minimize"></div>
+                            <div class="control maximize"></div>
+                        </div>
+                        <div class="terminal-title">manage.py</div>
+                    </div>
+                    <div class="terminal-content">
+                        <p><span class="prompt">$</span> whoami</p>
+                        <p class="response">Lautaro Boffi</p>
+                        <p><span class="prompt">$</span> location</p>
+                        <p class="response">Buenos Aires, Argentina</p>
+                        <p><span class="prompt">$</span> status</p>
+                        <p class="response">Ready to build robust backend solutions</p>
+                        
+                        <div id="commandOutput" class="command-output"></div>
+                        <div class="command-input">
+                            <span class="prompt">$</span>
+                            <input type="text" id="terminalInput" placeholder="Type 'help' for commands..." autofocus>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="{% static 'js/terminal.js' %}"></script>
+
+</body>
+
+{% endblock %}

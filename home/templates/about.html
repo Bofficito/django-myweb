@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+
+{% block about %}
+{% load static %}
+
+<head>
+    <title>{% block title %} About {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<div class="body-about">
+  <div class="vscode-window">
+    <div class="terminal-header">
+      <div class="terminal-controls">
+          <div class="control close"></div>
+          <div class="control minimize"></div>
+          <div class="control maximize"></div>
+      </div>
+    </div>
+    <div class="file-tabs">
+        <div class="file-tab">about_me.py</div>
+        <div class="file-tab-button inactive">
+          <a href="{% url 'skills' %}" class="file-button">skills.py</a>
+        </div>
+        <div class="file-tab-button inactive">
+          <a href="{% url 'contact' %}" class="file-button">contact.py</a>
+        </div>
+        <div class="file-tab-button inactive">
+          <a href="{% url 'base' %}" class="file-button">Go to Terminal</a>
+        </div>
+    </div>
+    <div class="editor-content">
+        <div class="line-numbers">
+            1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24
+        </div>
+        <div class="code-content">
+            <div class="comment"># Jr Backend Developer Profile v1.0.0</div>
+            <div class="comment"># A passionate backend developer who occasionally ventures into frontend territory</div>
+            <div class="comment"># TODO: Check technical skills -><a href="{% url 'skills' %}" style="color: #366D9B;">HERE</a></div>
+            
+            <div class="code-block">
+                <div class="code-line">
+                    <span class="keyword">class</span> <span class="function">BackendDeveloper</span>:
+                </div>
+                <div class="code-line">
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">def</span> <span class="function">__init__</span>(self):
+                </div>
+                <div class="code-line">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.name = <span class="string">"Lautaro Boffi"</span>
+                </div>
+                <div class="code-line">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.role = <span class="string">"Jr Backend Developer"</span>
+                </div>
+            </div>
+
+            <div class="comment"># Technical Skills</div>
+            <div class="code-block">
+                <div class="code-line">
+                    &nbsp;&nbsp;&nbsp;&nbsp;self.languages = [
+                </div>
+                <div class="list-item"><span class="string">"Python"</span>,</div>
+                <div class="list-item"><span class="string">"SQL"</span>,</div>
+                <div class="list-item"><span class="string">"JavaScript"</span> <span class="comment"># but only when necessary 😅</span></div>
+                <div class="code-line">
+                    &nbsp;&nbsp;&nbsp;&nbsp;]
+                </div>
+            </div>
+
+            <!-- <div class="comment"># Current Projects</div>
+            <div class="code-block">
+                <div class="code-line">
+                    &nbsp;&nbsp;&nbsp;&nbsp;self.projects = {
+                </div>
+                <div class="list-item">
+                    <span class="string">"API Optimizer"</span>: {
+                    <span class="string">"status"</span>: <span class="string">"in progress"</span>,
+                    <span class="string">"tech"</span>: [<span class="string">"Python"</span>, <span class="string">"FastAPI"</span>]
+                    },
+                </div>
+                <div class="list-item">
+                    <span class="string">"Database Tool"</span>: {
+                    <span class="string">"status"</span>: <span class="string">"planning"</span>,
+                    <span class="string">"tech"</span>: [<span class="string">"PostgreSQL"</span>, <span class="string">"Python"</span>]
+                    }
+                </div>
+                <div class="code-line">
+                    &nbsp;&nbsp;&nbsp;&nbsp;}
+                </div>
+            </div> -->
+
+            <div class="comment"># Fun Facts</div>
+            <div class="code-block">
+                <div class="code-line">
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">def</span> <span class="function">get_fun_facts</span>(self):
+                </div>
+                <div class="code-line">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> [
+                </div>
+                <div class="list-item"><span class="string">"I debug with print statements (and I'm proud of it)"</span>,</div>
+                <div class="list-item"><span class="string">"I believe tabs are superior to spaces"</span>,</div>
+                <div class="list-item"><span class="string">"I can write SQL queries faster than I can write CSS"</span></div>
+                <div class="code-line">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="status-bar">
+        <div class="status-item">
+            <span class="mini-icon"></span>
+            Python 3.11.0
+        </div>
+        <div class="status-item">
+            <span class="mini-icon"></span>
+            UTF-8
+        </div>
+        <div class="status-item">
+            <span class="mini-icon"></span>
+            Production
+        </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  lucide.createIcons();
+</script>
+
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block about %}
+{% load static %}
+
+<head>
+    <title>{% block title %} Submit {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<div class="body-submit">
+    <div class="terminal-submit">
+        <div class="terminal-header">
+            <div class="terminal-controls">
+                <div class="control close"></div>
+                <div class="control minimize"></div>
+                <div class="control maximize"></div>
+            </div>
+            <div class="terminal-title">message-handler.py</div>
+        </div>
+        <div class="terminal-body">
+            <div class="command-line">
+                <span class="prompt">$</span> <span class="command">python message_handler.py --process-message</span>
+            </div>
+            
+            <div class="output-line">[<span class="timestamp">2025-03-21 14:32:15</span>] Initializing message handler...</div>
+            <div class="output-line">[<span class="timestamp">2025-03-21 14:32:15</span>] Validating message data<span class="loading-dots"></span></div>
+            
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+            
+            <div class="output-line">[<span class="timestamp">2025-03-21 14:32:17</span>] Processing attachments: None</div>
+            <div class="output-line">[<span class="timestamp">2025-03-21 14:32:17</span>] Checking spam score: 0.01</div>
+            <div class="output-line">[<span class="timestamp">2025-03-21 14:32:17</span>] Message priority: Normal</div>
+            <div class="output-line success">[<span class="timestamp">2025-03-21 14:32:18</span>] ✓ Message processed successfully!</div>
+            <div class="output-line success">[<span class="timestamp">2025-03-21 14:32:18</span>] ✓ Notification sent to recipient</div>
+            <div class="output-line">
+                <span class="error-code">Return code: 0</span> - Operation completed successfully
+            </div>
+            
+            <a href="{% url 'base' %}" class="view-button">← Return to Terminal</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
